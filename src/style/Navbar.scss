@@ -1,0 +1,120 @@
+@import "./Variable";
+
+//*********** PC **************//
+// body{
+//   overflow-x: hidden;
+// }
+.nav-container {
+  background-color: $blackColor;
+  @include flexRow(space-between, center);
+  font-family: $navbarFont;
+  color: $whiteColor;
+  width: 100%;
+  min-height: 10vh;
+  padding: 0 50px;
+  position: relative;
+  .about-btn {
+    @include buttonStyle($navbarFont, $whiteColor, $blue);
+    font-weight: 500;
+    font-size: 17px;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+    &:hover {
+      opacity: 90%;
+    }
+  }
+
+  .nav-menu {
+    @include listStyle();
+    @include flexRow(center, center);
+    .nav-link {
+      a {
+        @include listStyle();
+        color: $whiteColor;
+      }
+      margin-right: 80px;
+      border: none;
+      width: 100px;
+      height: auto;
+      padding: 10px 0;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.5s ease-in-out;
+      border-radius: 10px;
+      &:hover {
+        background-color: $whiteColor;
+        a {
+          color: black;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  .fas {
+    display: none;
+  }
+  .fa-align-justify {
+    font-size: 30px;
+  }
+  .fa-times {
+    font-size: 40px;
+  }
+
+  //*********** MOBILE RESPONSIVE **************//
+  .mobile-nav-container {
+    position: fixed;
+    z-index: 99;
+    background-color: $blackColor;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100vh;
+    .mobile-nav-menu {
+      margin-top: 50px;
+      @include listStyle();
+      .mobile-nav-link {
+        margin-bottom: 50px;
+        text-align: center;
+        width: fit-content;
+        transition: all 0.2s ease-in;
+        a {
+          @include listStyle();
+          color: $whiteColor;
+        }
+        &:hover {
+          border-bottom: 3px solid $whiteColor;
+        }
+      }
+    }
+    .mobile-btn {
+      @include buttonStyle($navbarFont, $whiteColor, $blue);
+      cursor: pointer;
+    }
+  }
+  .mobile-nav-container {
+    @include flexCol(start, center);
+    transform: translateX(100%);
+    transition: all 0.5s ease-out;
+  }
+}
+
+
+// resaponsive
+@media screen and (max-width: 900px) {
+  .nav-container {
+    .nav-active {
+      display: none;
+    }
+    .fas {
+      display: block;
+    }
+    .btn-active {
+      display: none;
+    }
+    
+    .mobile-nav-active {
+      @include flexCol(start, center);
+      transform: translateX(0%);
+    }
+  }
+}

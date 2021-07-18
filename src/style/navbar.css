@@ -1,0 +1,188 @@
+.nav-container {
+  background-color: #24252a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Roboto", sans-serif;
+  color: #ffff;
+  width: 100%;
+  min-height: 10vh;
+  padding: 0 50px;
+  position: relative;
+}
+
+.nav-container .about-btn {
+  font-family: "Roboto", sans-serif;
+  color: #ffff;
+  background-color: #0ca3c7;
+  border: none;
+  width: 94px;
+  height: 31px;
+  border-radius: 12px;
+  font-weight: 500;
+  font-size: 17px;
+  cursor: pointer;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.nav-container .about-btn:hover {
+  opacity: 90%;
+}
+
+.nav-container .nav-menu {
+  list-style-type: none;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav-container .nav-menu .nav-link {
+  margin-right: 80px;
+  border: none;
+  width: 100px;
+  height: auto;
+  padding: 10px 0;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  border-radius: 10px;
+}
+
+.nav-container .nav-menu .nav-link a {
+  list-style-type: none;
+  text-decoration: none;
+  color: #ffff;
+}
+
+.nav-container .nav-menu .nav-link:hover {
+  background-color: #ffff;
+}
+
+.nav-container .nav-menu .nav-link:hover a {
+  color: black;
+  font-weight: 500;
+}
+
+.nav-container .fas {
+  display: none;
+}
+
+.nav-container .fa-align-justify {
+  font-size: 30px;
+}
+
+.nav-container .fa-times {
+  font-size: 40px;
+}
+
+.nav-container .mobile-nav-container {
+  position: fixed;
+  z-index: 99;
+  background-color: #24252a;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 100vh;
+}
+
+.nav-container .mobile-nav-container .mobile-nav-menu {
+  margin-top: 50px;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.nav-container .mobile-nav-container .mobile-nav-menu .mobile-nav-link {
+  margin-bottom: 50px;
+  text-align: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.nav-container .mobile-nav-container .mobile-nav-menu .mobile-nav-link a {
+  list-style-type: none;
+  text-decoration: none;
+  color: #ffff;
+}
+
+.nav-container .mobile-nav-container .mobile-nav-menu .mobile-nav-link:hover {
+  border-bottom: 3px solid #ffff;
+}
+
+.nav-container .mobile-nav-container .mobile-btn {
+  font-family: "Roboto", sans-serif;
+  color: #ffff;
+  background-color: #0ca3c7;
+  border: none;
+  width: 94px;
+  height: 31px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.nav-container .mobile-nav-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+@media screen and (max-width: 900px) {
+  .nav-container .nav-active {
+    display: none;
+  }
+  .nav-container .fas {
+    display: block;
+  }
+  .nav-container .btn-active {
+    display: none;
+  }
+  .nav-container .mobile-nav-active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+/*# sourceMappingURL=navbar.css.map */

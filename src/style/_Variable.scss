@@ -1,0 +1,43 @@
+@mixin flexRow($justifyContent, $alignItem) {
+  display: flex;
+  justify-content: $justifyContent;
+  align-items: $alignItem;
+}
+
+@mixin flexCol($justifyContent, $alignItem) {
+  display: flex;
+  flex-direction: column;
+  justify-content: $justifyContent;
+  align-items: $alignItem;
+}
+
+@mixin buttonStyle($font, $fontColor, $bgColor) {
+  font-family: $font;
+  color: $fontColor;
+  background-color: $bgColor;
+  border: none;
+  width: 94px;
+  height: 31px;
+  border-radius: 12px;
+}
+
+@mixin listStyle() {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+@mixin cardTextStyle(){
+  font-size: 14px;
+  color: #736E6E;
+  font-family: $robotoFont;
+}
+
+// color
+$blue: #0ca3c7;
+$blackColor: #24252a;
+$whiteColor: #ffff;
+$grayColor: #F0F4F8;
+
+// font
+$navbarFont: "Roboto", sans-serif;
+$robotoFont: "Roboto", sans-serif;

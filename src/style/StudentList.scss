@@ -1,0 +1,139 @@
+@import "./Variable";
+
+.student-container {
+  width: 100%;
+  height: 90vh;
+  background-color: rgb(78, 78, 78);
+  @include flexCol(start, center);
+
+  .search-bar {
+    width: 90%;
+    background-color: transparent;
+    @include flexRow(flex-end, center);
+    padding: 30px 0;
+
+    .search-box {
+      outline: none;
+      padding: 10px 20px;
+      width: 300px;
+      height: 39px;
+      font-family: $robotoFont;
+      border-radius: 20px;
+      border: 0.1px solid $blue;
+      margin-right: 10px;
+      color: rgb(119, 116, 116);
+    }
+
+    .search-btn {
+      font-size: 17px;
+      border-radius: 20px;
+      width: 100px;
+      height: 39px;
+      border: none;
+      color: $whiteColor;
+      background-color: $blue;
+      cursor: pointer;
+    }
+  }
+  .cards-wrapper {
+    background-color: $grayColor;
+    width: 90%;
+    height: auto;
+    padding: 20px 40px;
+
+    // @include flexCol(center, center);
+    .header {
+      font-family: $robotoFont;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 25px;
+      color: #39a1ba;
+      margin: 25px 0;
+    }
+
+    .stu-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 40px;
+      .stu-card {
+        width: 100%;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        border-radius: 14px;
+        padding: 10px;
+        background-color: $whiteColor;
+        .top-card {
+          @include flexRow(space-between, center);
+          @include cardTextStyle();
+        }
+        .middle-card {
+          @include flexCol(center, center);
+          .dob {
+            margin-right: 90px;
+            @include cardTextStyle();
+          }
+
+          p {
+            @include cardTextStyle();
+          }
+          h2 {
+            font-size: 18px;
+            font-family: $robotoFont;
+            color: #018bac;
+            font-weight: 400;
+          }
+          .full-name {
+            font-size: 16px;
+            color: rgb(82, 82, 82);
+            margin: 15px 0;
+            text-align: center;
+            height: 42px;
+          }
+          .major {
+            color: #fc522d;
+          }
+          .school-icon {
+            font-size: 13px;
+            margin: 15px 0;
+            .fa-university {
+              color: $blue;
+              font-size: 14px;
+              margin-right: 5px;
+            }
+          }
+          .view-profile {
+            margin-top: 20px;
+
+            border-top: 0.1px solid rgb(196, 196, 196);
+            padding: 20px 0;
+            p {
+              font-size: 14px;
+            }
+            &:hover {
+              background-color: #53b9fd;
+              p {
+                color: $whiteColor;
+              }
+              font-weight: 400;
+              width: 100%;
+              border: none;
+              text-align: center;
+              cursor: pointer;
+            }
+          }
+          .img-container {
+            width: 150px;
+            height: 150px;
+            overflow: hidden;
+            @include flexRow(center,center);
+            .avatar-png {
+              width: 100%;
+              height: auto;
+              border-radius: 50%;
+              margin-bottom: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

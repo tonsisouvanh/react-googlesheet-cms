@@ -1,0 +1,209 @@
+.student-container {
+  width: 100%;
+  height: 90vh;
+  background-color: #4e4e4e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.student-container .search-bar {
+  width: 90%;
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px 0;
+}
+
+.student-container .search-bar .search-box {
+  outline: none;
+  padding: 10px 20px;
+  width: 300px;
+  height: 39px;
+  font-family: "Roboto", sans-serif;
+  border-radius: 20px;
+  border: 0.1px solid #0ca3c7;
+  margin-right: 10px;
+  color: #777474;
+}
+
+.student-container .search-bar .search-btn {
+  font-size: 17px;
+  border-radius: 20px;
+  width: 100px;
+  height: 39px;
+  border: none;
+  color: #ffff;
+  background-color: #0ca3c7;
+  cursor: pointer;
+}
+
+.student-container .cards-wrapper {
+  background-color: #F0F4F8;
+  width: 90%;
+  height: auto;
+  padding: 20px 40px;
+}
+
+.student-container .cards-wrapper .header {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  color: #39a1ba;
+  margin: 25px 0;
+}
+
+.student-container .cards-wrapper .stu-cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+}
+
+.student-container .cards-wrapper .stu-cards .stu-card {
+  width: 100%;
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 14px;
+  padding: 10px;
+  background-color: #ffff;
+}
+
+.student-container .cards-wrapper .stu-cards .stu-card .top-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+  color: #736E6E;
+  font-family: "Roboto", sans-serif;
+}
+
+.student-container .cards-wrapper .stu-cards .stu-card .middle-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.student-container .cards-wrapper .stu-cards .stu-card .middle-card .dob {
+  margin-right: 90px;
+  font-size: 14px;
+  color: #736E6E;
+  font-family: "Roboto", sans-serif;
+}
+
+.student-container .cards-wrapper .stu-cards .stu-card .middle-card p {
+  font-size: 14px;
+  color: #736E6E;
+  font-family: "Roboto", sans-serif;
+}
+
+.student-container .cards-wrapper .stu-cards .stu-card .middle-card h2 {
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  color: #018bac;
+  font-weight: 400;
+}
+
+.student-container .cards-wrapper .stu-cards .stu-card .middle-card .full-name {
+  font-size: 16px;
+  color: #525252;
+  margin: 15px 0;
+  text-align: center;
+  height: 42px;
+}
+
+.student-container .cards-wrapper .stu-cards .stu-card .middle-card .major {
+  color: #fc522d;
+}
+
+.student-container .cards-wrapper .stu-cards .stu-card .middle-card .school-icon {
+  font-size: 13px;
+  margin: 15px 0;
+}
+
+.student-container .cards-wrapper .stu-cards .stu-card .middle-card .school-icon .fa-university {
+  color: #0ca3c7;
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+.student-container .cards-wrapper .stu-cards .stu-card .middle-card .view-profile {
+  margin-top: 20px;
+  border-top: 0.1px solid #c4c4c4;
+  padding: 20px 0;
+}
+
+.student-container .cards-wrapper .stu-cards .stu-card .middle-card .view-profile p {
+  font-size: 14px;
+}
+
+.student-container .cards-wrapper .stu-cards .stu-card .middle-card .view-profile:hover {
+  background-color: #53b9fd;
+  font-weight: 400;
+  width: 100%;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+.student-container .cards-wrapper .stu-cards .stu-card .middle-card .view-profile:hover p {
+  color: #ffff;
+}
+
+.student-container .cards-wrapper .stu-cards .stu-card .middle-card .img-container {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.student-container .cards-wrapper .stu-cards .stu-card .middle-card .img-container .avatar-png {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+/*# sourceMappingURL=StudentList.css.map */

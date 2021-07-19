@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import tabletop from "tabletop";
+import { Form, Button } from "react-bootstrap";
+import "../../style/TaskAdd.css";
 function TaskAdd() {
   const [tasks, setTasks] = useState([]);
   const [taskName, setTaskName] = useState("");
@@ -22,9 +24,11 @@ function TaskAdd() {
       )
       .then((res) => console.log("res", res));
 
+    alert("task added!");
     setTaskName("");
     setTaskDue("0000/00/00");
     setTaskStatus(false);
+    setChecked(false);
   };
 
   const handleChecked = () => {
@@ -48,7 +52,7 @@ function TaskAdd() {
 
   return (
     <>
-      <form onSubmit={handleSubmit} className="task-form">
+      {/* <form onSubmit={handleSubmit} className="task-form">
         <label className="task-name">Task:</label>
         <input
           value={taskName}
@@ -72,7 +76,43 @@ function TaskAdd() {
           className="task-status"
         />
         <button type="submit">Submit</button>
-      </form>
+      </form> */}
+      {/* ----- */}
+      <Form onSubmit={handleSubmit} className="form">
+        <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Label>Task</Form.Label>
+          <Form.Control
+            value={taskName}
+            onChange={(e) => setTaskName(e.target.value)}
+            type="text"
+            className="task-name"
+            placeholder="Task name..."
+          />
+        </Form.Group>
+
+        <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Label>Due to</Form.Label>
+          <Form.Control
+            value={taskDue}
+            onChange={(e) => setTaskDue(e.target.value)}
+            type="date"
+            className="task-due"
+          />
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="formBasicCheckbox">
+          <Form.Check
+            value={checked}
+            onChange={handleChecked}
+            type="checkbox"
+            defaultChecked={checked}
+            label="Done?"
+          />
+        </Form.Group>
+        <Button variant="primary" type="submit">
+          Submit
+        </Button>
+      </Form>
+      {/* ----- */}
       <div>
         {tasks.map((t) => {
           return (

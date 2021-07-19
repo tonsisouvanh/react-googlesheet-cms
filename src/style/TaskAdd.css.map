@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,KAAK,CAAA;EACD,OAAO,EAAE,IAAI;CAChB",
+    "sources": [
+        "TaskAdd.scss",
+        "_Variable.scss"
+    ],
+    "names": [],
+    "file": "TaskAdd.css"
+}
